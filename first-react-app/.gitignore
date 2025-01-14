@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/osx,windows,visualstudiocode,node
-# Edit at https://www.toptal.com/developers/gitignore?templates=osx,windows,visualstudiocode,node
+# Created by https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,node
+# Edit at https://www.toptal.com/developers/gitignore?templates=windows,visualstudiocode,node
 
 ### Node ###
 # Logs
@@ -141,35 +141,6 @@ dist
 # SvelteKit build / generate output
 .svelte-kit
 
-### OSX ###
-# General
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Icon must end with two \r
-Icon
-
-
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
-
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
@@ -215,4 +186,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/osx,windows,visualstudiocode,node
+# End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,node
