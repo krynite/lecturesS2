@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "BRUNO - SEB-55 Pets",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
