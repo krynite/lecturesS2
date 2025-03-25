@@ -1,30 +1,20 @@
-import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router";
+import { useState } from "react";
+import { useNavigate } from "react-router";
 import petService from "../services/petService";
 
-export default function EditPetPage() {
-  //? hooks -> law of hooks
-  const { petId } = useParams();
-  const navigate = useNavigate();
+export default function CreatePetForm({ addPet }) {
   const [formData, setFormData] = useState({
     name: "",
     age: "",
     breed: "",
   });
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    const getPet = async () => {
-      const data = await petService.show(petId);
-      setFormData(data);
-    };
-    getPet();
-  }, [petId]);
-
-  //? logic -> eventHandler
   const handleSubmit = (event) => {
     event.preventDefault();
-    const pet = { ...formData, age: Number(formData.age) };
-    petService.edit(pet);
+    const newPet = { ...formData, age: Number(formData.age) };
+    petService.create(newPet);
+    // addPet(newPet);
     navigate("/pets");
   };
 
@@ -33,13 +23,11 @@ export default function EditPetPage() {
     setFormData({ ...formData, [name]: value });
   };
 
-  //? JSX
   return (
     <>
-      <p>{petId}</p>
       <form onSubmit={handleSubmit}>
         <fieldset>
-          <legend>Edit Pet</legend>
+          <legend>New Pet</legend>
 
           <label>
             Name:
@@ -68,7 +56,8 @@ export default function EditPetPage() {
           </label>
 
           <br />
-          <button>Edit</button>
+
+          <button>Add</button>
         </fieldset>
       </form>
     </>

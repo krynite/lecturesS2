@@ -1,0 +1,32 @@
+meta {
+  name: airtable new post from jsx
+  type: http
+  seq: 10
+}
+
+post {
+  url: https://api.airtable.com/v0/appfPOUufQUjrWkOe/Table%201?maxRecords=3&view=Grid%20view
+  body: json
+  auth: none
+}
+
+params:query {
+  maxRecords: 3
+  view: Grid view
+}
+
+headers {
+  Authorization: Bearer patyNwS3TS4fEIOsH.00e89440c4d24c460e50374c8ca2514902eb1cd8d3a562abeff98f818ac3acff
+}
+
+body:json {
+  {
+    "fields": {
+      "ID": "f9ef",
+      "Owner": "testing on js",
+      "Age": "3",
+      "Name": "Buddy",
+      "Breed": "Golden Retriever"
+    }
+  }
+}
